@@ -19,7 +19,7 @@ main table td:nth-child(1) {
 main table th:last-child,
 main table td:last-child {
     width: 50px;
-    font-size: 26px;
+    font-size: 17px;
 }
 
 

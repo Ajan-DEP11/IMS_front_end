@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+main table th:first-child, main table td:first-child {
+  width: 20px;
+}
+
+main table th:first-child, main table td:first-child {
+  width: 50px;
+}
+
+main table th:last-child, main table td:last-child {
+  width: 50px;
+  font-size: 17px;
+}
+
+#icons .delete:hover {
+  color: red;
+  cursor: pointer;
+}
+
+#icons .edit:hover {
+  color: green;
+  cursor: pointer;
+}
+
+main table td:last-child > i:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=teacher.4bfda1e7.css.map */
