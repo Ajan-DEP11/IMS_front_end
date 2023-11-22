@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/teacherStyle.css">
+    <script defer src="js/teacher.js"></script>
+</head>
+<body>
+<header class="p-2 text-center border-bottom">
+    <h2 class="mb-0">Institution Management System</h2>
+</header>
+<main class="container-fluid vh-100">
+    <div class="row">
+        <div class="col-xl-5">
+            <div class="d-flex mt-2 justify-content-between gap-5">
+                <h5 class="mt-2">Teachers Registration</h5>
+                <button id="btnAddNewTeacher" class="btn btn-primary p-1 ">+ NEW TEACHER</button>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="txt-id" class="form-label">Teacher ID</label>
+                    <input name="name" type="text" readonly class="form-control" id="txt-id" placeholder="1">
+                </div>
+                <div class="mb-3">
+                    <label for="txt-name" class="form-label">Teacher Name <b class="text-danger">*</b></label>
+                    <input required pattern="^[A-Za-z ]+$" name="name" type="text" class="form-control" id="txt-name" placeholder="Eg. Kasun Sampath">
+                </div>
+                <div class="mb-3">
+                    <label for="txt-contact" class="form-label">Contact Number<b class="text-danger">*</b></label>
+                    <input required minlength="4" name="contact"  type="text" class="form-control" id="txt-contact" placeholder="Eg. Grace Peries Road, Panadura">
+                </div>
+                
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary" id="btn-add">ADD</button>
+                    <button type="reset" class="btn btn-warning" id="btn-clear">CLEAR</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xl-7">
+
+            <table class="mt-2 table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th>NAME</th>
+                    <th>CONTACT</th>
+                    <th class="text-center">ACTION</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<footer class="text-center border-top p-2">
+    Copyright &copy; 2023 DEP-11. ALL Rights Reserved.   
+</footer>
+</body>
+</html>
