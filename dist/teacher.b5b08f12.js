@@ -51,9 +51,31 @@ function createNewRow(teacher) {
                     <td>${teacher.id}</td>
                     <td>${teacher.name}</td>
                     <td>${teacher.contact}</td>
-                    <td><button class="delete btn btn-danger">Delete</button></td>
+                    <td><div id="icons" class="d-flex gap-3 fs-5">
+                    <i data-bs-toggle="tooltip" 
+                        data-bs-placeme="left"
+                        data-bs-title="Click to edit" 
+                        class="edit bi bi-pen"></i>
+                        <i data-bs-toggle="tooltip" 
+                        data-bs-placeme="left"
+                        data-bs-title="Click to delete" 
+                        class="delete bi bi-trash3"></i>
+                    </div></td>
                 </tr>
     `;
 }
+taskcontainerElm.addEventListener("click", (e)=>{
+    if (e.target?.classList.contains("delete")) {
+        const taskId = e.target.closest("li").id.substring(5);
+        fetch(`${API_URL}/tasks/${taskId}`, {
+            method: "DELETE"
+        }).then((res)=>{
+            if (res.ok) e.target.closest("li").remove();
+            else alert("Failed to delete the task");
+        }).catch((err)=>{
+            alert("Something went wrong. Trt Later");
+        });
+    }
+});
 
 //# sourceMappingURL=teacher.b5b08f12.js.map
