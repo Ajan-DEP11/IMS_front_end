@@ -618,7 +618,18 @@ function createNewRow(teacher) {
                     <td>${teacher.id}</td>
                     <td>${teacher.name}</td>
                     <td>${teacher.contact}</td>
-                    <td><button class="delete btn btn-danger">Delete</button></td>
+                    <td>
+                        <div id="icons" class="d-flex gap-3 fs-5">
+                        <i data-bs-toggle="tooltip" 
+                            data-bs-placeme="left"
+                            data-bs-title="Click to edit" 
+                            class="edit bi bi-pen"></i>
+                            <i data-bs-toggle="tooltip" 
+                            data-bs-placeme="left"
+                            data-bs-title="Click to delete" 
+                            class="delete bi bi-trash3"></i>
+                        </div>
+                    </td>
                 </tr>
     `;
 }
