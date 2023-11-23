@@ -9,7 +9,7 @@ const btnAddElm = document.querySelector("#btn-add");
 const btnClearElm = document.querySelector("#btn-clear");
 const btnAddNewCustomerElm = document.querySelector("#btnAddNewCustomer");
 const txtNameElm = document.querySelector("#txt-name");
-const txtAddressElm = document.querySelector("#txt-address");
+const txtContElm = document.querySelector("#txt-contact");
 const txtIdElm = document.querySelector("#txt-id");
 const { API_URL } = process.env;
 loadAllTeachers();
